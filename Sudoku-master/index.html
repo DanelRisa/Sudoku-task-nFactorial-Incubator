@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>Sudoku</title>
+
+        <link rel="stylesheet" href="sudoku.css">
+        <script src="sudoku.js"></script>
+    </head>
+
+    <body>
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <h2>Welcome to the Sudoku game!</h2>
+              <p>Click the "Start" button to begin the game.</p>
+              <button id="startButton" onclick="startGame()">Start</button>
+              
+            </div>
+          </div>
+          <div class = "bid-header">
+            <div class="header">
+              <h3> Difficulty: </h3>
+              <button onclick="level1()" class="lvl-btn">Easy</button>
+              <button onclick="level2()" class="lvl-btn">Medium</button>
+              <button onclick="level3()" class="lvl-btn">Hard</button>
+          </div> 
+          <div>
+          <div id="buttons" class="buttons">
+          </div>
+          <button onclick="resetGame()">Reset</button>
+
+          </div>
+          </div>
+          
+        <h1>Sudoku</h1>
+        <hr>
+        <div id="timer">00:00</div>
+        <h2 id="errors">0</h2>
+                <!-- 9x9 board -->
+        <div id="board"></div>
+        <br>
+        <div id="digits">
+        </div>
+                <button id="submit-btn" onclick="submitSolution()" class="submit-btn">Submit</button>
+
+        <div id="game-container">
+            <div id="board-container">
+                <div id="board"></div>
+                <div id="digits"></div>
+            </div>
+        </div>
+        <script src="sudokusolver.js"></script>
+
+    </body>
+
+
+</html>
